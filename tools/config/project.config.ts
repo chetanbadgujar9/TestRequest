@@ -35,14 +35,20 @@ THEME_FONTS_SRC = [
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
       { src: 'primeng/resources/primeng.css', inject: true },
-{ src: 'primeng/resources/themes/omega/theme.css', inject: true },
-{ src: 'font-awesome/css/font-awesome.min.css', inject: true },
-      // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
+      { src: 'primeng/resources/themes/omega/theme.css', inject: true },
+      { src: 'font-awesome/css/font-awesome.min.css', inject: true },
+
+      {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
+      { src: 'bootstrap/dist/js/bootstrap.min.js', inject: 'libs' },
+      { src: 'bootstrap/dist/css/bootstrap.min.css', inject: true },
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
     ];
 
     // Add `local` third-party libraries to be injected/bundled.
     this.APP_ASSETS = [
+      { src: `${this.APP_SRC}/css/main.css`, inject: true, vendor: true },
+      { src: `${this.APP_SRC}/css/sb-admin-2.css`, inject: true, vendor: true },
+      { src: `${this.APP_SRC}/css/timeline.css`, inject: true, vendor: true },
       // {src: `${this.APP_SRC}/your-path-to-lib/libs/jquery-ui.js`, inject: true, vendor: false}
       // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
     ];

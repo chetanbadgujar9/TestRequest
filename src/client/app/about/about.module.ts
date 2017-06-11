@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about.component';
 import { AboutRoutingModule } from './about-routing.module';
-import { CalendarModule } from 'primeng/primeng';
-import {BrowserModule} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { SharedModule } from '../shared/shared.module';
 @NgModule({
-  imports: [CommonModule, AboutRoutingModule,CalendarModule],
+  imports: [CommonModule, AboutRoutingModule, SharedModule],
   declarations: [AboutComponent],
   exports: [AboutComponent]
 })
